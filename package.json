@@ -4,7 +4,7 @@
   "description": "This is a codealong with Shaun (Net Ninja) so I can figure out MongoDB...stay tuned for some cool graphics! https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Richard-Burd/mongodb-codealong#readme",
   "dependencies": {
+    "mocha": "^8.0.1",
     "mongoose": "^5.9.22"
   }
 }
