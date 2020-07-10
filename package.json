@@ -1,0 +1,23 @@
+{
+  "name": "mongodb-codealong",
+  "version": "1.0.0",
+  "description": "This is a codealong with Shaun (Net Ninja) so I can figure out MongoDB...stay tuned for some cool graphics! https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richard-Burd/mongodb-codealong.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richard-Burd/mongodb-codealong/issues"
+  },
+  "homepage": "https://github.com/Richard-Burd/mongodb-codealong#readme",
+  "dependencies": {
+    "mongoose": "^5.9.22"
+  }
+}
