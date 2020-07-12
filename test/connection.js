@@ -27,3 +27,11 @@ before(function(done){ // any code in here is gonna run before we start the test
 
 
 });
+
+// Drop the characters collection before each test
+beforeEach(function(done){
+  // Drop the collection
+  mongoose.connection.collections.mariochars.drop(function(){
+    done();
+  }); // mongoose pluralises the collection to "mariochars"
+});

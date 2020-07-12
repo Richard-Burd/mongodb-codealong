@@ -3,10 +3,9 @@ const assert = require('assert');
 const MarioChar = require('../models/mariochar')
 
 // describe tests
-describe('Saving records', function(){
+describe('Finding records', function(){
 
-  // create tests
-  it('saves a record to the database', function(done){
+  beforeEach(function(done){
     // assert something
     var char = new MarioChar({
       name: "Mario"
@@ -16,7 +15,14 @@ describe('Saving records', function(){
     // this method is asyncronious.
     char.save().then(function(){
       assert(char.isNew === false); // is true when saved locally but not in the database
-      done(); // this is a mocha method
+      done();
+    });
+  });
+  // create tests
+  it('Finds one record from the database', function(done){
+    MarioChar.findOne({name: 'Mario'}).then(function(result){
+      assert(result.name === 'Mario');
+      done();
     });
   });
 });
