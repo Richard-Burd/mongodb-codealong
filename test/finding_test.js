@@ -5,9 +5,11 @@ const MarioChar = require('../models/mariochar')
 // describe tests
 describe('Finding records', function(){
 
+  var char; // declare the variable to be defined later on down below
+
   beforeEach(function(done){
     // assert something
-    var char = new MarioChar({
+    char = new MarioChar({
       name: "Mario"
     });
 
@@ -19,9 +21,17 @@ describe('Finding records', function(){
     });
   });
   // create tests
-  it('Finds one record from the database', function(done){
+  it('Finds one record by name from the database', function(done){
     MarioChar.findOne({name: 'Mario'}).then(function(result){
       assert(result.name === 'Mario');
+      done();
+    });
+  });
+
+  it('Finds one record by ID from the database', function(done){
+    MarioChar.findOne({_id: char._id}).then(function(result){
+      // these are both objects, which aren't the same, so they're made into strings
+      assert(result._id.toString() === char._id.toString());
       done();
     });
   });

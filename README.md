@@ -3,7 +3,7 @@ This is a codealong with Shaun (Net Ninja) so I can figure out MongoDB...stay tu
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u
 
 Left Off here:
-https://www.youtube.com/watch?v=5dhoyoet0Fk&list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u&index=9
+https://www.youtube.com/watch?v=5dhoyoet0Fk&list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u&index=14
 
 
 ## MongoDB Installation
