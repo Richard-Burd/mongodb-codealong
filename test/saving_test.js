@@ -6,7 +6,7 @@ const MarioChar = require('../models/mariochar')
 describe('Saving records', function(){
 
   // create tests
-  it('saves a record to the database', function(done){
+  it('Saves a record to the database', function(done){
     // assert something
     var char = new MarioChar({
       name: "Mario"

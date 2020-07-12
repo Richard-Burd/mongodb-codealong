@@ -10,7 +10,8 @@ describe('Updating records', function(){
   beforeEach(function(done){
     // assert something
     char = new MarioChar({
-      name: "Mario"
+      name: "Mario",
+      weight: 50
     });
 
     // mongoose gives us this save method
@@ -31,4 +32,14 @@ describe('Updating records', function(){
     });
   });
 
+  it('Increments the weight by 1', function(done){
+    // updating all instances of this class...
+    // $inc is the increment operator, "1" is how much we're incrementing it by
+    MarioChar.updateOne({}, {$inc: {weight: 1}}).then(function(){
+      MarioChar.findOne({name: 'Mario'}).then(function(record){
+        assert(record.weight === 51);
+        done();
+      });
+    });
+  });
 });
